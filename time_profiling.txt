@@ -1,0 +1,7 @@
+For a single function profiling line-per-line, adding the "@profile" decoder before the function declaration and run the command:
+"kernprof -l -v main.py"
+
+For a full function calls:
+python -m cProfile -o program.prof main.py
+Afterward, run:
+tuna program.prof

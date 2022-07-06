@@ -1,0 +1,14 @@
+index,street_name
+1,bialik
+2,abba_hollel_solver_rd
+3,tuval
+4,ahaliav
+5,ha-yestira
+6,harakon
+7,shoham
+8,habonim
+9,haahim_bejerano
+10,ha_khilazon
+11,derech_menachem_begin
+12,zisman_shalom
+13,bezalel
