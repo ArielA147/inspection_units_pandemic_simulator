@@ -1,4 +1,4 @@
-# Ariel's Master
+# Inspection Units Pandemic Simulator
 A spatio-temporal simulator for pandemic spread with the inspection units pandemic intervention model.
 Details about the relevant theory and methods can be found in our [paper](add-here-later).
 
@@ -24,7 +24,7 @@ These can be found in the **requirements.txt** and easly installed using the "pi
 
 If you use parts of the code in this repository for your own research purposes, please cite:
 
-@article{lorch2022quantifying,
+@article{alexi2022,
 	title={A Security Games Inspired Approach for Distributed Controlling Of Pandemic Spread},
 	author={Alexi, A. and Rosenfeld, A. and Lazebnik, T.},
 	journal={TBD},
