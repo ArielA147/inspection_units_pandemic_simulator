@@ -73,6 +73,10 @@ class Graph:
                  for row_index, row in enumerate(data)]
         return list(itertools.chain.from_iterable(edges))
 
+    def copy(self):
+        return Graph(nodes=[node.copy() for node in self.nodes],
+                     edges=[edge.copy() for edge in self.edges])
+
     def __hash__(self):
         return (self.nodes, self.edges).__hash__()
 

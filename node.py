@@ -12,6 +12,9 @@ class Node:
                  id: int):
         self.id = id
 
+    def copy(self):
+        return Node(id=self.id)
+
     def __hash__(self):
         return self.id.__hash__()
 

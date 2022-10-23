@@ -32,6 +32,9 @@ class Population:
 
     # logic #
 
+    def copy(self):
+        return Population(agents=[agent.copy() for agent in self.agents])
+
     # end - logic #
 
     @staticmethod

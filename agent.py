@@ -42,6 +42,12 @@ class Agent:
     def put_mask(self):
         self.mask = True
 
+    def copy(self):
+        return Agent(epidimiological_state=self.e_state,
+                     location=self.location,
+                     timer=self.timer,
+                     mask=self.mask)
+
     def __hash__(self):
         return (self.e_state, self.location).__hash__()
 

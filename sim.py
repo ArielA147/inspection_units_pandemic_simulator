@@ -5,6 +5,7 @@ import numpy as np
 
 # project imports
 from graph import Graph
+from pips.multi_aggressive_pip import PIPMultiAggressive
 from pips.pip import PIP
 from walks.walk import Walk
 from population import Population
@@ -170,6 +171,18 @@ class Simulator:
             return self.epi_dist[-1][EpidemiologicalState.D] / self.population.get_size()
         except:
             return 0
+
+    def copy(self):
+        return Simulator(population=self.population.copy(),
+                         graph=self.graph.copy(),
+                         walk_policy=self.walk_policy,
+                         pip=self.pip,
+                         max_time=self.max_time)
+
+    def allocate_iu(self,
+                    allocation: list):
+        self.pip = PIPMultiAggressive(control_node_ids=allocation,
+                                      found_exposed=self.pip.found_exposed)
 
     # end - analysis #
 
