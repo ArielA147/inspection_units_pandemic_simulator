@@ -153,11 +153,9 @@ class Simulator:
 
     def mean_r_zero(self):
         return np.mean([(self.epi_dist[i + 1][int(EpidemiologicalState.I)] - self.epi_dist[i][
-            int(EpidemiologicalState.I)]) / (self.epi_dist[i + 1][int(EpidemiologicalState.R)] - self.epi_dist[i][
-            int(EpidemiologicalState.R)])
-                        if (self.epi_dist[i + 1][int(EpidemiologicalState.R)] - self.epi_dist[i][
-            int(EpidemiologicalState.R)]) else (
-                    self.epi_dist[i + 1][int(EpidemiologicalState.I)] - self.epi_dist[i][int(EpidemiologicalState.I)])
+            int(EpidemiologicalState.I)] + self.epi_dist[i + 1][int(EpidemiologicalState.R)] - self.epi_dist[i][
+            int(EpidemiologicalState.R)] / (self.epi_dist[i][int(EpidemiologicalState.I)]))
+                        if self.epi_dist[i][int(EpidemiologicalState.I)] > 0 else 0
                         for i in range(len(self.epi_dist) - 1)])
 
     def get_max_infected_portion(self):
