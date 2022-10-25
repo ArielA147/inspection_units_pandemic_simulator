@@ -10,7 +10,7 @@ from edge import Edge
 
 class Graph:
     """
-    A graph object
+    A simple graph object - implemented using a list of nodes with IDs and edges of these IDs
     """
 
     def __init__(self,

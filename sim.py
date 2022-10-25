@@ -52,7 +52,7 @@ class Simulator:
 
     def run_step(self):
         """
-        The main logic of the class, make a single
+        The main logic of the class, make a single step in time
         """
         # split the population for nodes and run the epidemiological model
         agents_in_nodes = [[] for _ in range(self.graph.get_size()+1)]

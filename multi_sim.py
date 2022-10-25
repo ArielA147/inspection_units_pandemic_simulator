@@ -23,9 +23,6 @@ class MultiSim:
             max_time: int,
             control_units: int,
             population_count: int):
-        """
-        Analyze random graph - the most simple case
-        """
         answer = []
         for _ in range(repeat_times):
             sim = sim_generator_function(node_count=node_count,

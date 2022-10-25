@@ -7,7 +7,7 @@ from epidemiological_state import EpidemiologicalState
 
 class Agent:
     """
-    An agent in the population
+    An agent in the population - implemented as timed finite state machine
     """
 
     def __init__(self,

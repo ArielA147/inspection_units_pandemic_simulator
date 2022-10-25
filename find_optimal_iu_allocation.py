@@ -15,7 +15,7 @@ from seird_parms import SEIRDparameter
 from epidemiological_state import EpidemiologicalState
 
 
-class BestInspectionUnitsAllocation:
+class OptimalInspectionUnitsAllocation:
     """
     A brute-force approach to find the best IU allocation on a graph
     """

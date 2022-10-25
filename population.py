@@ -8,7 +8,7 @@ from graph import Graph
 
 class Population:
     """
-    The population in the simulator
+    The population in the simulator - wrapping the "Agent" class by a list and adding some meta-logic
     """
 
     def __init__(self,

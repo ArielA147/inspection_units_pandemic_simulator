@@ -133,13 +133,13 @@ class Main:
             labels.append("{}".format(edge_count))
         # run the fully connected as baseline to compare with
         print("Main.run_multi_random: Working on fully connected")
-        max_infected_values_fully = MultiSim.run(sim_generator_function=SimulatorGenerator.full_connected,
+        max_infected_values_fully = MultiSim.run(sim_generator_function=SimulatorGenerator.fully_connected,
                                                  sim_info_extraction_function=Simulator.get_max_infected_portion,
                                                  repeat_times=repeat_times,
                                                  node_count=node_count,
                                                  edge_count=node_count*node_count,
                                                  max_time=max_time,
-                                                  control_units=control_units,
+                                                 control_units=control_units,
                                                  population_count=population_count)
         means.append(np.mean(max_infected_values_fully))
         stds.append(np.std(max_infected_values_fully))
@@ -170,7 +170,7 @@ class Main:
         for control_units in range(0, node_count+1, round(node_count/10)):
             print("Main.max_infected_over_aggressive_pip: Working on {} control units".format(control_units))
             start = time.time()
-            max_infected_values_random = MultiSim.run(sim_generator_function=SimulatorGenerator.simple_random_aggressive_controled,
+            max_infected_values_random = MultiSim.run(sim_generator_function=SimulatorGenerator.simple_random_aggressive_controlled,
                                                       sim_info_extraction_function=Simulator.mean_r_zero,
                                                       repeat_times=repeat_times,
                                                       node_count=node_count,
