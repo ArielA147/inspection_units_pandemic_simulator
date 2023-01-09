@@ -1,6 +1,6 @@
 # Inspection Units Pandemic Simulator
 A spatio-temporal simulator for pandemic spread with the inspection units pandemic intervention model.
-Details about the relevant theory and methods can be found in our [paper](add-here-later).
+Details about the relevant theory and methods can be found in our [paper](https://onlinelibrary.wiley.com/doi/abs/10.1002/adts.202200631).
 
 ## Abstract 
 Pandemics are a source of extensive mortality, economic impairment, and dramatic social fluctuation.
